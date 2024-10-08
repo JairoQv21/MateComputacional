@@ -1,0 +1,159 @@
+:root{
+    --purple-hsl: 255, 60%, 60%;
+    --overlay-blurple: hsla(var(--purple-hsl), .2);
+    --header-color: hsl(224, 14%, 16%);
+    --main-color : hsl(224, 10%, 10%);
+    --button-color: hsl(224, 100%, 85%);
+    --titles-color: hsl(0, 0%, 100%);
+    --subtitles-color: hsl(224, 6%, 77%);
+    --border-color: rgb(53, 56, 65);
+    --background-colorizer : linear-gradient(215deg,var(--overlay-blurple),transparent 40%),radial-gradient(var(--overlay-blurple),transparent 40%) no-repeat -60vw -40vh / 105vw 200vh,radial-gradient(var(--overlay-blurple),transparent 65%) no-repeat 50% calc(100% + 20rem) / 60rem 30rem;
+}
+
+
+.header{
+    background: var(--background-colorizer);
+    background-color: var(--main-color);
+}
+
+.header .logo{
+    flex: 0 0 auto; /* Evita que la imagen se estire */
+    width: 60px; /* Ajusta el ancho de la imagen según sea necesario */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
+}
+.header .logo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.header .text-container{
+    flex: 1; /* Ocupa el espacio restante */
+    padding: 20px; /* Añade espacio interno alrededor del texto */
+    color: var(--titles-color); /* Color del texto */
+}
+.header .text-container h2{
+    font-size: 25px;
+}
+
+
+/* Colores para los enlaces del nav */
+.header .nav-link {
+    color: var(--titles-color); /* Aplica tu variable CSS o color directo */
+    font-size: 20px;
+}
+
+/* Colores para los ítems del dropdown */
+.header .dropdown-item {
+    color: var(--titles-color) ; /* Aplica tu variable CSS o color directo */
+    font-size: 18px;
+}
+
+.header .dropdown-item:hover {
+     /* Cambia el fondo al hacer hover */
+    color: var(--header-color) ; /* Cambia el color del texto al hacer hover */
+    background-color: var(--button-color) ;
+}
+
+/* Cambiar el color de fondo del dropdown (opcional) */
+.header .dropdown-menu {
+    background-color: var(--header-color)  /* Aplica tu color de fondo */
+}
+
+
+
+body {
+    background: var(--background-colorizer);
+    background-color: var(--main-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    margin-top: 0;
+    color: var(--subtitles-color);
+
+}
+
+main{
+    margin: 58px 58px;
+}
+h1{
+    color: var(--titles-color);
+}
+.aligner-container{
+    display: flex;
+    height: 250px;
+}
+
+.item-label{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 25px;
+
+}
+.item-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 45px;
+    margin-left: auto;
+    margin-right: 270px;
+
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+}
+input{
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 18px;
+    background-color: var(--header-color);
+    border: 1px solid var(--border-color);
+    color: var(--subtitles-color);
+}
+#funcion{
+    margin-top: 10px;
+    width: 80%;
+}
+label{
+    font-size: 20px;
+    color: var(--titles-color);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+table, th, td {
+    border: 1px solid var(--border-color);
+}
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+button{
+    margin-top: 25px;
+    margin-bottom: 28px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: var(--button-color);
+    color: var(--main-color);
+    border: 1px solid var(--border-color);
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

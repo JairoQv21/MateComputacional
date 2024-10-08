@@ -1,0 +1,156 @@
+:root{
+    --purple-hsl: 255, 60%, 60%;
+    --overlay-blurple: hsla(var(--purple-hsl), .2);
+    --header-color: hsl(224, 14%, 16%);
+    --main-color : hsl(224, 10%, 10%);
+    --button-color: hsl(224, 100%, 85%);
+    --titles-color: hsl(0, 0%, 100%);
+    --subtitles-color: hsl(224, 6%, 77%);
+    --border-color: rgb(53, 56, 65);
+    --background-colorizer : linear-gradient(215deg,var(--overlay-blurple),transparent 40%),radial-gradient(var(--overlay-blurple),transparent 40%) no-repeat -60vw -40vh / 105vw 200vh,radial-gradient(var(--overlay-blurple),transparent 65%) no-repeat 50% calc(100% + 20rem) / 60rem 30rem;
+}
+
+html, body {
+    background-color: var(--main-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.header .logo{
+    flex: 0 0 auto; /* Evita que la imagen se estire */
+    width: 60px; /* Ajusta el ancho de la imagen según sea necesario */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
+}
+.header .logo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.header .text-container{
+    flex: 1; /* Ocupa el espacio restante */
+    padding: 20px; /* Añade espacio interno alrededor del texto */
+    color: var(--titles-color); /* Color del texto */
+}
+.header .text-container h2{
+    font-size: 25px;
+}
+.header{
+    background: var(--background-colorizer);
+    background-color: var(--main-color);
+}
+
+/* Colores para los enlaces del nav */
+.header .nav-link {
+    color: var(--titles-color); /* Aplica tu variable CSS o color directo */
+    font-size: 20px;
+}
+
+/* Colores para los ítems del dropdown */
+.header .dropdown-item {
+    color: var(--titles-color) ; /* Aplica tu variable CSS o color directo */
+    font-size: 18px;
+}
+
+.header .dropdown-item:hover {
+     /* Cambia el fondo al hacer hover */
+    color: var(--header-color) ; /* Cambia el color del texto al hacer hover */
+    background-color: var(--button-color) ;
+}
+
+/* Cambiar el color de fondo del dropdown (opcional) */
+.header .dropdown-menu {
+    background-color: var(--header-color)  /* Aplica tu color de fondo */
+}
+
+
+main .container-hero{
+    align-items: center;
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    padding: 8rem;
+    column-gap: 3% ;
+    padding-block: 150px;
+    row-gap: 3% ;
+    background: var(--background-colorizer);
+    background-color: var(--main-color);
+    
+}
+
+.container-hero .content-hero-1{
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+}
+
+.container-hero img{
+    object-fit: contain;
+    order: 2;
+    overflow-clip-margin: content-box;
+    overflow-x: clip;
+    overflow-y: clip;
+}
+
+.container-hero .content-hero-1 .subcontent-hero-1{
+    display: flex;
+    flex-direction: column;
+    column-gap: 16px;
+    row-gap: 16px;
+}
+
+.container-hero .content-hero-1 .subcontent-hero-1 h1{
+    color: var(--titles-color);
+    max-width: 50ch;
+    overflow-wrap: anywhere;
+    text-align: start;
+    font-weight: 600 bold;
+    font-size: 3em;
+    line-height: 60px;
+}
+
+.container-hero .content-hero-1 .subcontent-hero-1 .text-hero-1{
+    font-size: 20px;
+    line-height: 35px;
+    max-width: 50ch;
+    text-align: start;
+    color: var(--subtitles-color);
+}
+
+.container-hero .content-hero-1 .subcontent-hero-2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: 32px;
+    row-gap: 16px;
+    text-align: start;
+}
+
+.container-hero .content-hero-1 .subcontent-hero-2 a{
+    background-color: var(--button-color);
+    color: var(--main-color);
+    align-items: center;
+    padding: 18px 14px;
+    border: 1px solid transparent;
+    border-radius: 999rem;
+    display: inline-flex;
+    gap: .5em;
+    line-height: 1.1875;
+    outline-offset: .25rem;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.container-hero .content-hero-1 .subcontent-hero-2 svg{
+    stroke-width: 1;
+    stroke: var(--main-color);
+    font-size: 24px;
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+}
